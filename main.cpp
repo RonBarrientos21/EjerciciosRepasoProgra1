@@ -1,11 +1,18 @@
 #include <iostream>
-#include <stdio.h>
+
 int main() {
 
     using namespace std;
 
     {
-        cout << "Ingrese la Opcion a ejecutar: ";
+        cout << "Ingrese la opcion a ejecutar: " << endl;
+        cout <<  "Presione 1 para determinar si usted es mayor de edad"<< endl;
+        cout <<  "Presione 2 para determinar que numero ingresado es mayor"<< endl;
+        cout <<  "Presione 3 para determinar si su numero es par o impar"<< endl;
+        cout <<  "Presione 4 para determinar el factorial de su numero"<< endl;
+        cout <<  "Presione 5 para determinar numeros impares entre 10 y 30"<< endl;
+        cout <<  "Presione 6 para determinar numeros impares usando While"<< endl;
+        cout <<  "Presione 7 para determinar dias de la semana"<< endl;
         int opcion = 0;
         cin >> opcion;
 
@@ -77,19 +84,42 @@ int main() {
                         case 5:
                             cout << "Determinar numero impares entre 10 y 30" << endl;
 
+                            {
+                                int a[30],i,cont=30;
+
+                                for(i = 30;i>0;i--){
+                                    if(i%2 != 0){
+                                        a[cont]=i;
+                                        cont--;
+                                    }
+                                }
+
+                                for(i = 30; i >= cont;i--){
+                                    cout << a[i]<<endl;
+                                }
+
+                        }
+
                     }
 
                     break;
+
                     case 6:
                         cout << "Determinar numero impar usando while" << endl;
+                    {int a=1;
+                        while (a<=30){
+                            cout <<a;
+                            a=a+2;
+                        }}
                     break;
 
+
                     case 7:
-                        int dia = 0;
+                        int dia;
                         cin >> opcion;
                         cout << "Determinar dia de la semana" << endl;
                     {
-                        int dia;
+
                         cout <<("\n   Introduzca dia de la semana: ");
 
                         switch (dia) {
@@ -115,15 +145,14 @@ int main() {
                                 cout <<("\n   Domingo");
                                 break;
                             default :
-                                cout <<("\n   ERROR: Dica incorrecto.");
+                                cout <<("\n   ERROR: Dia incorrecto.");
                         }
                         break;
 
 
                     }
-                    system("PAUSE");
 
-                    return 0;
+
                 }
 
 
